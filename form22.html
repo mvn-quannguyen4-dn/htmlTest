@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <script lang="JavaScript">
+            function check(){
+                if(document.f11.username.value == '' || document.f11.password.value == ''){
+                    alert("username or password blank");
+                }
+            }
+            function Clear(){
+                document.f11.username.value = '';
+                document.f11.password.value = '';
+            }
+        </script>
+    </head>
+    <body style="background-color: lightcyan">
+        <Form name="f11", action="", method="">
+                    <p>Register</p>
+                    <label>Username</label>
+                    <input type="text" name="username" value="" style="margin-bottom: 8px;">
+                    <br>
+                    <label>Password</label>
+                    <input type="password" name="password" value="" style="margin-bottom: 8px;">
+                    <br>
+                    <select>
+                        <option>
+                            male
+                        </option>
+                        <option>
+                            female
+                        </option>
+                    </select>
+                    <br>
+                    <textarea placeholder="text content"></textarea>
+                    <br>
+                    <input type="button" value="OK" style="margin-left: 8%;" onclick="check()">
+                    <input type="button" value="Reset" onclick="Clear()">
+            </table>
+        </Form>
+    </body>
+</html>
