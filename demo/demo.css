@@ -1,0 +1,50 @@
+a:after {
+    content: " (" attr(href) ")";
+}
+.calc-demo {
+    width: calc(100% - 100px);
+    border: 1px solid black;
+    background-color: cyan;
+    text-align: center;
+    padding: 5px;
+}
+.rbg-demo{
+    background-color:rgb(255,0,0);
+    color: bisque;
+}
+.rbga-demo{
+    background-color:rgba(255,0,0,0.5);
+}
+.rotate-demo{
+    margin-left: 40%;
+    width: 200px;
+    height: 100px;
+    background-color: cyan;
+    border: 1px solid black;
+    transform: rotate(60deg);
+}
+.scale-demo{
+    margin-left: 40%;
+    width: 200px;
+    height: 100px;
+    background-color: cyan;
+    border: 1px solid black;
+    transform: scale(2,2);
+}
+.translate-demo{
+    width: 200px;
+    height: 100px;
+    background-color: cyan;
+    border: 1px solid black;
+    transform: translate(500px,20px);
+}
+.linear-demo{
+    width: 200px;
+    height: 100px;
+    background-color: cyan;
+    border: 1px solid black;
+    background-image: linear-gradient(red, yellow, blue);
+    margin-left: 40%;
+    text-align: center;
+    color: aquamarine;
+}

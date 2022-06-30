@@ -50,7 +50,14 @@ body {
 .col-6 {
   width: 50%;
 } 
+
+/* font */
+html {
+  font-family: 'Poppins',sans-serif;
+}
+
 /* Header */ 
+
 .header-top {
   height: 80px;
   background-color: #dfdbd6;
@@ -66,23 +73,139 @@ body {
   display: flex;
   justify-content: space-between;
 }
+.header-top{
+  justify-content: space-between;
+  height: auto;
+}
 .header-top-left{
  padding: 0 10px;
+}
+.header-top-left-item{
+  position: relative;
+  padding: 10px;
+  border: none;
+  background-color: #dfdbd6;
+}
+.header-top-left-item::after{
+  box-sizing: border-box;
+}
+.header-top-right{
+  align-self: center;
 }
 .header-top-right>p>span{
  color: red;
 }
+.header-bottom{
+  justify-content: space-between;
+  height: auto;
+  background-color: #dfdbd6;
+}
 .icon{
     width: 50px;
 }
+.menu-title a{
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  color: #242424;
+}
+
+
 /* main */
+
 .large-img{
     width: 100%;
 }
-.category-content{
-    background-image: url("./image.png");
-    background-color: #6bb039;
+
+/* category */
+.category{
+  position: relative;
 }
+.category div{
+  position: absolute;
+}
+.category-content{
+    padding:10px;
+}
+
+/* deal-of-the-day */
+.deal-of-the-day{
+  justify-content: space-around;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+}
+.deal-of-the-day h2 {
+  font-size: 48px;
+  margin: 0;
+  color: #010101;
+  text-align: center;
+}
+.deal-of-the-day li span{
+  font-size: 48px;
+  font-weight: 300;
+  display: inline-block;
+  min-width: 75px;
+  margin: 0 32px;
+  color: #555;
+  text-align: center;
+}
+.deal-of-the-day li span p{
+  font-size: 20px;
+  font-weight: 300;
+  display: inline-block;
+  min-width: 75px;
+  margin: 0 32px;
+  color: #555;
+}
+.deal-of-the-day .shop-now{
+  line-height: 1;
+  z-index: 1;
+  display: inline-block;
+  padding: 16px 56px;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  background-color: red;
+  color: white;
+} 
+
+/* endow */
+.endow{
+  padding: 20px;
+  background-image: url(https://flone.reactdemo.hasthemes.com/assets/img/bg/shape.png);
+}
+.endow .row{
+  width:100%;
+  justify-content: space-around;
+}
+.endow .endow-item{
+  text-align: center!important;
+  position: relative;
+  width: 32%;
+  padding: 30px 10px 24px;
+}
+.endow .endow-img{
+  position: absolute;
+}
+.endow .free-shipping{
+  background-color: rgb(204, 251, 233);
+}
+.endow .money-return{
+  background-color: rgb(242, 251, 204);
+}
+.endow .member-discound{
+  background-color: rgb(221, 251, 204);
+}
+.endow p {
+  font-size: 16px;
+  margin: 4px 0 0;
+  text-transform: uppercase;
+  color: #000;
+}
+
+
 .section-slideshow {
   position: relative;
 }
