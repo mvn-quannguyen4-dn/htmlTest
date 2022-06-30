@@ -2,26 +2,27 @@
 <html>
     <head>
         <link rel="stylesheet" href="./index.css">
+        <link rel="stylesheet" href="./responsive.css" />
     </head>
     <body>
         <header class="header">
-            <div class="header-top flex-wrapper">
+            <div class="header-top flex-wrapper responsive-wide">
                 <div class="header-top-left flex-wrapper">
-                    <div class="langue">
-                        <ul>
-                            <li>English</li>
-                            <li>French</li>
-                            <li>Germany</li>
-                        </ul>
+                    <div>
+                        <select name="langue" id="langue"  class="header-top-left-item">
+                            <option value="">English</option>
+                            <option value="">French</option>
+                            <option value="">Germany</option>
+                        </select>
                     </div>
-                    <div class="curency">
-                        <ul>
-                            <li>USD</li>
-                            <li>EUR</li>
-                            <li>GBP</li>
-                        </ul>
+                    <div>
+                        <select name="curency" id="curency" class="header-top-left-item">
+                                <option>USD</option>
+                                <option>EUR</option>
+                                <option>GBP</option>
+                        </select>
                     </div>
-                    <div class="contact">
+                    <div class="contact header-top-left-item">
                         <p>Call Us 3965410</p>
                     </div>
                 </div>
@@ -29,7 +30,8 @@
                     <p>Free delivery on order over <span>€200.00</span></p>
                 </div>
             </div>
-            <div class="header-bottom flex-wrapper">
+            <hr>
+            <div class="header-bottom flex-wrapper responsive-wide">
                 <div class="header-bottom-left">
                     <div class="header-logo"><a href="#"><img src="./logo.png" alt="LOGO"></a></div>
                 </div>
@@ -59,7 +61,7 @@
                                 </li>
                                 <li>
                                     <ul>
-                                        <li class="menu-title"><a href="#"></a>Home Group Two</li>
+                                        <li class="menu-title"><a href="#">Home Group Two</a></li>
                                         <li><a href="#">Home Furniture Five</a></li>
                                         <li><a href="#">Home Furniture Six</a></li>
                                         <li><a href="#">Home Furniture Seven</a></li>
@@ -78,7 +80,7 @@
                                 </li>
                                 <li>
                                     <ul>
-                                        <li class="menu-title"><a href=""></a>Home Group Three</li>
+                                        <li class="menu-title"><a href="">Home Group Three</a></li>
                                         <li><a href="#">Home Grid Banner</a></li>
                                         <li><a href="#">Home Auto Parts</a></li>
                                         <li><a href="#">Home Cake Shop</a></li>
@@ -95,7 +97,7 @@
                         </li>
                         <li>
                             <a href="#">Shop</a>
-                            <ul>
+                            <ul class="menu flex-wrapper">
                                 <li>
                                     <ul>
                                         <li class="menu-title"><a href="#">Shop Layout</a></li>
@@ -162,83 +164,106 @@
                 </div>
             </div>
         </header>
-        <div class="large-img container">
+        <div class="large-img container responsive-wide">
             <img src="./image.png" alt="large-img" class="large-img">
             <a class="left" href="#"></a>
             <a class="right" href="#"></a>
         </div>
-        <div class="category flex-wrapper">
-            <div class="new-arrivals category-content">
-                <a href="#"><img src="#" alt=""></a>
-                <div>                
-                    <h3>New Arrivals</h3>
-                    <h4>Choose your products here</h4>\
-                    <a href=""><i></i></a>
-                </div>
-            </div>
-            <div class="featured-products category-content">
-                <a href="#"><img src="#" alt=""></a>
-                <div>
-                    <h3>Featured Products</h3>
-                    <h4>Choose your products here</h4>
-                    <a href=""><i></i></a>
-                </div>
-            </div>
-            <div class="best-seller category-content">
-                <a href="#"><img src="#" alt=""></a>
-                <div>
-                    <h3>Best Seller</h3>
-                    <h4>Choose your products here</h4>
-                    <a href=""><i></i></a>
-                </div>
-            </div>
+        <div class="category responsive-wide">
+            <ul class="flex-wrapper">
+                <li class="new-arrivals category-content">                
+                    <div>                
+                        <h3>New Arrivals</h3>
+                        <h4>Choose your products here</h4>
+                        <a href="">-></a>
+                    </div>
+                        <a href="#"><img src="https://flone.reactdemo.hasthemes.com/assets/img/banner/banner14.jpg" alt="banner"></a>
+                </li>
+                <li class="featured-products category-content">
+                    <div>
+                        <h3>Featured Products</h3>
+                        <h4>Choose your products here</h4>
+                        <a href="">-></a>
+                    </div>
+                    <a href="#"><img src="https://flone.reactdemo.hasthemes.com/assets/img/banner/banner15.jpg" alt="banner"></a>
+                </li>
+                <li class="best-seller category-content">
+                    <div>
+                        <h3>Best Seller</h3>
+                        <h4>Choose your products here</h4>
+                        <a href="">-></a>
+                    </div>
+                    <a href="#"><img src="https://flone.reactdemo.hasthemes.com/assets/img/banner/banner16.jpg" alt=""></a>
+                </li>
+            </ul>
         </div>
-        <div class="deal-of-the-day flex-wrapper">
+        <div class="deal-of-the-day flex-wrapper container responsive-wide">
+            <div class="demo-img"><a href="#"><img src="https://flone.reactdemo.hasthemes.com/assets/img/banner/deal-5.png" alt="demo-img"></a></div>
             <div>
                 <h2>Deal of the day</h2>
                 <div class="time">
-                    <span class="count-days">
-                        0
-                        <p>DAYS</p>
-                    </span>
-                    <span class="count-hours">
-                        <p>HOURS</p>
-                    </span>
-                    <span class="count-minutes">
-                        <p>MINUTES</p>
-                    </span>
-                    <span class="count-secs">
-                        <p>SECS</p>
-                    </span>
+                    <ul class="flex-wrapper">
+                        <li>
+                            <span class="count-days">
+                                0
+                                <p>DAYS</p>
+                            </span>
+                        </li>
+                        <li>  
+                            <span class="count-hours">
+                                0
+                                <p>HOURS</p>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="count-minutes">
+                                0
+                                <p>MINUTES</p>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="count-secs">
+                                0
+                                <p>SECS</p>
+                            </span>
+                        </li>
+                    </ul>
                 </div>
-                <div class="shop-now"><a href="#"></a></div>
-            </div>
-            <div class="demo-img"><a href="#"><img src="./image.png" alt="demo-img"></a></div>
-        </div>
-        <div class="endow  flex-wrapper">
-            <div class="free-shipping">
-                <img src="" alt="">
-                <p>
-                    <img src="free-shipping" alt="">
-                    <p>Free shipping on all order</p>
-                </p>
-            </div>
-            <div class="money-return">
-                <img src="" alt="">
-                <p>
-                    <img src="money-return" alt="">
-                    <p>Back guarantee under 5 days</p>
-                </p>
-            </div>
-            <div class="member-discound">
-                <img src="" alt="">
-                <p>
-                    <img src="member-discound" alt="">
-                    <p>On every order over $150</p>
-                </p>
+                <div class="shop-now"><a href="#"> SHOP NOW </a></div>
             </div>
         </div>
-        <div class="best-products">
+        <div class="endow responsive-wide">
+            <div class="row flex-wrapper col-3">
+                <div class="free-shipping endow-item">
+                    <div class="endow-img">
+                        <img src="https://flone.reactdemo.hasthemes.com/assets/img/icon-img/support-5.png" alt="icon">
+                    </div>
+                    <div class="endow-item-content">
+                        <img src="https://flone.reactdemo.hasthemes.com/assets/img/icon-img/support-8.png" alt="">
+                        <p>Free shipping on all order</p>
+                    </div>
+                </div>
+                <div class="money-return endow-item">
+                    <div class="endow-img">
+                        <img src="https://flone.reactdemo.hasthemes.com/assets/img/icon-img/support-6.png" alt="icon">
+                    </div>
+                    <div class="endow-item-content">
+                        <img src="https://flone.reactdemo.hasthemes.com/assets/img/icon-img/support-9.png" alt="">
+                        <p>Back guarantee under 5 days</p>
+                    </div>
+                </div>
+                <div class="member-discound endow-item">
+                    <div class="endow-img">
+                        <img src="https://flone.reactdemo.hasthemes.com/assets/img/icon-img/support-7.png" alt="icon">
+                    </div>
+                    <div class="endow-item-content">
+                        <img src="https://flone.reactdemo.hasthemes.com/assets/img/icon-img/support-10.png" alt="">
+                        <p>On every order over $150</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="best-products responsive-wide">
             <div class="container">
                 <div>
                     <div>
@@ -356,7 +381,7 @@
                 </div>
             </div>
         </div>
-        <div class="quick-category">
+        <div class="quick-category responsive-wide">
             <div class="single-category">
                 <a href=""></a>
                 <div>
@@ -374,7 +399,7 @@
                 </div>
             </div>
         </div>
-        <div class="subcribe">
+        <div class="subcribe responsive-wide">
             <div class="container">
                 <h2>Join With Us!</h2>
                 <p>Subscribe to our newsletter to receive news on update</p>
@@ -387,7 +412,7 @@
             </div>
         </div>
         <footer>
-            <div class="flex-wrapper">
+            <div class="flex-wrapper responsive-wide">
                 <div class="copyright">
                     <div><img src="./logo.png" alt="LOGO"></div>
                     <p>© 2022 <a href="#">Flone</a>.<br><br> All Rights Reserved</p>
