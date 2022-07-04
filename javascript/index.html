@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./index.css">
+    <script src="index.js">
+
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>HTML + Javascript Exercise</h1>
+    <h2>Knowledge round-up</h2>
+    <h3>Javascript</h3> 
+        <ul>What are the differences between a variable that is: null, undefined?</ul> 
+            <li>undefined: <span>giá trị của một biến không thể xác định được giá trị, có thể là không chưa giá trị nào hoặc chưa được khai báo</span></li>
+            <li>null: <span>giá trị của một biến, mang ý nghĩa rỗng hoặc giá trị không tồn tại</span></li>
+            <li>undefined để chỉ một kiểu dữ liệu không xác định, trong khi null được xem là một kiểu dữ liệu object</li> 
+        <hr>
+        <ul>What is use strict? what are the advantages and disadvantages to using it?</ul>
+            <li>use strict: <span>Thực thi đoạn mã tiếp theo trong chê độ nghiêm ngặt (strict mode)</span></li>
+            <li><ul>Advantages:</ul>
+                <li>loại bỏ một số lỗi im lặng JavaScript bằng cách thay đổi chúng để ném lỗi.</li>
+                <li>sửa các lỗi khiến các công cụ JavaScript khó thực hiện tối ưu hóa</li>
+                <li>ngăn chặn hoặc ném lỗi, khi các hành động tương đối không an toàn được thực hiện</li>
+                <li>giúp việc viết JavaScript bảo mật dễ dàng hơn</li>
+            </li>
+            <li>
+                <ul>Disadvantages:</ul>
+                    <li>Mất đi tính linh hoạt vì một số hành động sẽ bị chặn ở chế độ này</li>
+                    <li>Mỗi đoạn lệnh đều được quản lý nghiêm ngặt nên có thể sẽ gây khó khăn trong quá trình kết hợp nhiều phần trong chế độ nghiêm ngặt</li>
+            </li>
+        <hr>
+        <ul> What are the differences between == and ===? Write an example for each case (if any)?</ul>
+            <li>'==' dùng để so sánh các biến có giá trị bằng nhau(các giá trị sẽ tự động được ép về cùng kiểu để so sánh) trong khi '===' dùng để so sánh cả kiểu dữ liệu và cả giá trị</li>
+            <li>Ví dụ
+                <br>
+                <h4> 1 === "1" :</h4>
+                <script>
+                    triple(1, "1")
+                </script>
+                <br>
+                <h4> 1 == "1" :</h4>
+                <script>
+                    double(1,"1")
+                </script>
+                <hr>
+            </li>
+        <hr>
+        <ul>Give a list of Falsy values in Javascript.</ul>
+            <li>undefined</li>
+            <li>null</li>
+            <li>NaN</li>
+            <li>0</li>
+            <li>""</li>
+            <li>false</li>
+        <hr>
+        <h3>Give an example for each of the following methods in Javascript</h3>
+            <h4>map()</h4>
+            array = [1, 2, "3", "4"]
+            <br>
+            cộng 1 mỗi phần tử với map
+            <br> 
+            <script>
+                array = [1,2,"3","4"]
+                myMap(array)
+            </script>
+            <h4>filter()</h4>
+            array = ["wordwithlonglenght", "word", "a", "1234567890", "2", 11]
+            <br>
+            lọc các kí tự với điều kiện có độ dài lớn hơn 10:
+            <br> 
+            <script>
+                array = ["wordwithlonglenght", "word", "a", "1234567890", "2", 11]
+                myFilter(array)
+            </script>
+            <h4>reduce()</h4>
+            array = [1, 2, "3", "4"]
+            <br>
+            sử dụng hàm cộng các phần tử với nhau với reduce:
+            <br> 
+            <script>
+                array = [1, 2, "3", "4"]
+                myReduce(array)
+            </script>
+            <h4>find()</h4>
+            array = [3, 10, 18, 20]
+            <br>
+            tìm kiếm số đầu tiên lớn hơn 18 với find:
+            <br> 
+            <script>
+                array = [3, 10, 18, 20]
+                myFind(array)
+            </script>
+            <h4>some()</h4>
+            array = [3, 10, 18, 20]
+            <br>
+            kiểm tra xem có số nào lớn hơn 18 trong mảng với some:
+            <br> 
+            <script>
+                array = [3, 10, 18, 20]
+                mySome(array)
+            </script> 
+            <hr>
+            <h3>Give an example for add a new element to an array[] (at the end)</h3>
+            array = [1, 2, 3 ,"4", "5", "a"]
+            <br>
+            thêm kí tự b:
+            <br> 
+            <script>
+                array = [1, 2, 3 ,"4", "5", "a"]
+                endString(array,"b")
+            </script> 
+            <hr>
+            <h3>Give an example for add a new element to an array[] (at the beginning)</h3>
+            array = [1, 2, 3 ,"4", "5", "a"]
+            <br>
+            thêm 0: 
+            <br>
+            <script>
+                array = [1, 2, 3 ,"4", "5", "a"]
+                startString(array,0)
+            </script> 
+            <hr>
+            <h3>Give an example for removing an element in array[]</h3>
+            array = [1, 2, 3 ,"4", "5", "a"]
+            <br>
+            xóa 2 ở giữa kí tự:
+            <br>
+            <script>
+                array = [1, 2, 3 ,"4", "5", "a"]
+                removeString(array,1,2)
+            </script> 
+            <hr>
+        <h2>Playground</h2>
+        <h3>1. Write a JavaScript program to compute the sum of the two given integers. If the two values are same, then returns triple their sum.</h3>
+        Input: a = 5, b = 10 
+        <br>
+        Output: <script>document.writeln(bt1(5,10))</script>
+        <br>
+        Input: a = 5, b = 5 
+        <br>        
+        Output: <script>document.writeln(bt1(5,5))</script>
+        <hr>
+
+        <h3>2. Write a JavaScript program to compute the absolute difference between a specified number and 19. Returns triple their absolute difference if the specified number is greater than 19.</h3>
+        Input: a = 12
+        <br>
+        Output: <script>document.writeln(bt2(12))</script>
+        <br>
+        Input: a = 22 
+        <br>        
+        Output: <script>document.writeln(bt2(22))</script>
+        <hr>
+
+        <h3>3. A masked number is a string that consists of digits and one asterisk (*) that should be replaced by exactly one digit. Given a masked number find all the possible options to replace the asterisk with a digit to produce an integer divisible by 3.</h3>
+        Input: a = '1*9'
+        <br>
+        Output: <script>document.writeln(bt3('1*9'))</script>
+        <br>
+        Input: a = '1234567890*'
+        <br>        
+        Output: <script>document.writeln(bt3('1234567890*'))</script>
+        <hr>
+
+        <h3>4. A masked number is a string that consists of digits and one asterisk (*) that should be replaced by exactly one digit. Given a masked number find all the possible options to replace the asterisk with a digit to produce an integer divisible by 6.</h3>
+        Input: a = '1*9'
+        <br>
+        Output: <script>document.writeln(bt4('1*9'))</script>
+        <br>
+        Input: a = '1234567890*'
+        <br>        
+        Output: <script>document.writeln(bt4('1234567890*'))</script>
+        <hr>
+</body>
+
+</html> 
