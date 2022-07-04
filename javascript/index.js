@@ -75,7 +75,7 @@ function bt4(x){
     let rs = [];
     for (let i=0;i<10;i++){
         let num = x.replace('*',i);
-        if (num % 6 === 0){
+        if (parseInt(num,10) % 6 === 0){
             rs.push(num);
         }
     }
