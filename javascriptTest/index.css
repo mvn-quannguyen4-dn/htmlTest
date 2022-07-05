@@ -26,8 +26,32 @@ header{
     align-self:center; 
     margin-right: 5%;
 }
-.cart-logo img{
-    height: 40px;
+.badge {
+    padding-left: 9px;
+    padding-right: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+}
+
+.label-warning[href],
+.badge-warning[href] {
+    background-color: #c67605;
+}
+#lblCartCount {
+      font-size: 20px;
+      background: #d9376e;
+      color: #eff0f3;
+      padding: 0 5px;
+      vertical-align: top;
+      margin-left: -10px; 
+}
+
+
+header .icon{
+    font-size: 300%;
+    color: #0d0d0d;
+    background-color: #fffffe;
 }
 .board{
     margin: 5% 10%;
@@ -44,7 +68,7 @@ header{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 80%;
 }
 .item-card .item-name{
     font-weight: bold;
@@ -63,10 +87,64 @@ header{
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+    cursor: pointer;
 }
-.item-card .button:hover {background-color: #d9376e}
+.item-card .button:hover {
+    background-color: #d9376e
+}
 
 .item-card .button:active {
+  background-color: #d9376e;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+table {
+    margin: 5%;
+    width: 90%;
+}
+table, th, td {
+    border: 1px solid black;
+}
+table thead tr{
+    padding: 10px;
+    text-align: center;
+}
+table .index{
+    text-align: center;
+}
+table .info{
+    display: flex;
+}
+table .info p{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    font-weight: bold;
+}
+table img{
+    width: 5%;
+}
+
+table .product-price{
+    text-align: center;
+}
+
+.action .delete-button{
+    border: none;
+    border-radius: 30px;;
+    background-color: #ff8e3c;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    cursor: pointer;
+}
+.action .delete-button:hover {
+    background-color: #d9376e
+}
+
+.action .delete-button:active {
   background-color: #d9376e;
   box-shadow: 0 5px #666;
   transform: translateY(4px);

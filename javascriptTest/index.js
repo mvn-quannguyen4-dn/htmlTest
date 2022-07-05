@@ -28,21 +28,82 @@ function items(){
                 cart=[];
             }
             cart.forEach(prod => {
-                if(prod === item.id) {
+                if(prod.id === item.id) {
                     valid = false;
                 }
             })
-            if(valid) cart.push(item.id);
+            if(valid) cart.push(item);
             localStorage.setItem("cart",JSON.stringify(cart));
+            window.location.reload();
         }
         card.appendChild(button);
         // button.addEventListener("click", addToCart(item.id));
         board[0].appendChild(card);
     });
 }
-
+function getOrder(){
+    document.write(JSON.parse(localStorage.getItem("cart")).length);
+}
 function cart(){
+    var list = document.getElementsByClassName("list");
+    var table = document.createElement("table");
+    table.setAttribute("class","list-order")
+    var tableHead = table.createTHead();
+    var row = tableHead.insertRow(0);
+    var cell = row.insertCell(0);
+    cell.innerHTML="<b>Index</b>"
+    cell = row.insertCell(1)
+    cell.innerHTML="<b>Infomation</b>"
+    cell = row.insertCell(2)
+    cell.innerHTML="<b>Price</b>"
+    cell = row.insertCell(3)
+    cell.innerHTML="<b>Delete</b>"
+    var cart = [];
+    cart = JSON.parse(localStorage.getItem("cart"));
+    // if(!cart){
+    //     cart=[];
+    // }
+    cart.forEach((prod,index) => {
+        var body = table.createTBody();
+        var dataRow = body.insertRow(0);
+        var dataCell = dataRow.insertCell(0);
+        dataCell.innerHTML = index+1;
+        dataCell.setAttribute("class","product-index");
 
+        dataCell = dataRow.insertCell(1);
+        var image = document.createElement("img");
+        image.setAttribute("src",prod.image);
+        image.setAttribute("class","product-img");
+        dataCell.appendChild(image);
+        dataCell.setAttribute("class","info");
+        var name = document.createElement("p");
+        name.setAttribute("class","product-name");
+        var textName = document.createTextNode(prod.name);
+        name.appendChild(textName);
+        dataCell.appendChild(name);
+
+        dataCell = dataRow.insertCell(2);
+        dataCell.innerHTML = "€"+prod.price;
+        dataCell.setAttribute("class","product-price");
+
+        dataCell = dataRow.insertCell(3);
+        dataCell.setAttribute("class","action");
+        var button = document.createElement("button");
+        button.setAttribute("class","delete-button")
+        button.innerHTML = "Delete";
+        button.onclick = function(){ 
+            var cart = [];
+            var valid = true;
+            cart = JSON.parse(localStorage.getItem("cart"));
+            cart.splice(index,1);
+            localStorage.setItem("cart",JSON.stringify(cart));
+            window.location.reload();
+        }
+        dataCell.appendChild(button);
+
+        // dataCell.innerHTML = "<img scr="+prod.image+" alt='product-image'><p>"+prod.name+"</p>";
+    })
+    list[0].appendChild(table);
 }
 
 const data={
