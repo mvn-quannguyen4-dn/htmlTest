@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="index.js">
+
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Javascript ES6 Exercise</h1>
+    <h2>Convert the code below from ES5 to ES6 and answer the question</h2>
+    <h3>1. Define a variable</h3>
+    <p style="font-weight: bold;">ES5</p> 
+    <span style="font-style: italic;">
+        <br>
+        var MAX_SIZE = 25 * 1024 * 1024;
+        <br>
+        var title = 'Hello World';
+        <br>
+        title = 'Hello ES6'
+        <br>
+    </span>
+    <span style="color:red;">- Question: Let and Const - What's the Difference?</span>
+    <p>Converted: <br></p>
+    <p><span style="font-style: italic;">
+        let MAX_SIZE = 25*1024*1024;
+        <br>
+        let title = "Hello World";
+        <br>
+        title = "Hello ES6"
+    </span></p>
+    <p>
+        Let: used for values that do change while the program executes<br>
+        Const: used for values that do not change while the program executes
+    </p>
+
+    <h3>2. String Interpolation</h3>
+    <p style="font-weight: bold;">ES5</p> 
+    <span style="font-style: italic;">
+        <br>
+        var user = { name: 'David' };
+        <br>
+        var card = { amount: 7, product: "Bar", unitprice: 42 };
+        <br>
+        var message = "Hello " + user.name + ",\n" +
+        <br>
+        "want to buy " + card.amount + " " + card.product + " for\n" +
+        <br>
+        "a total of " + (card.amount * card.unitprice) + " bucks?";
+        <br>
+    </span>
+    <p>Converted: <br></p>
+    <p><span style="font-style: italic;">
+        let user = { name: 'David' };
+        <br>
+        let card = {amount: 7, product: "Bar", unitprice: 42};
+        <br>
+        let message = `Hello ${user.name}
+        <br>
+        want to buy ${card.amount} ${card.product} for
+        <br>
+        a total of ${(card.amount * card.unitprice)} bucks?;`
+        <br>
+        </span>
+    </p>
+    <script>question2()</script>
+
+    <h3>3. Rest Parameter</h3>
+    <p style="font-weight: bold;">ES5</p> 
+    <span style="font-style: italic;">
+        <br>
+        function foo(x, y) {
+        <br>
+        var a = Array.prototype.slice.call(arguments, 2);
+        <br>
+        return (x + y) * a.length;
+        <br>
+        };
+        <br>
+        foo(1, 2, 'hello', true, 7) === 9;
+        <br>
+    </span>
+    <p>Converted: <br></p>
+    <p><span style="font-style: italic;">
+        function foo(x, y, ...a) {
+        <br>
+        return (x + y) * a.length;
+        <br>
+        };
+        <br>
+        foo(1, 2, 'hello', true, 7) === 9;
+        <br>
+        </span>
+    </p>
+
+    <h3>4. Default Parameter Values</h3>
+    <p style="font-weight: bold;">ES5</p> 
+    <span style="font-style: italic;">
+        <br>
+        function sum(x, y, z) {
+        <br>
+        if (y === undefined) {
+        <br>
+        y = 7;
+        <br>
+        }
+        <br>
+        if (z === undefined) {
+            <br>
+            z = 42;
+            <br>
+          }
+          <br>
+          return x + y + z;
+          <br>
+        };
+        <br>
+    </span>
+    <p>Converted: <br></p>
+    <p><span style="font-style: italic;">
+        function sum(x, y = 7, z = 42) {
+        <br>
+        return x + y + z;
+        <br>
+        };
+        <br>
+        </span>
+    </p>
+
+    <h3>5. Arrow Functions</h3>
+    <p style="font-weight: bold;">ES5</p> 
+    <span style="font-style: italic;">
+        var evens = [1, 2, 3, 4, 5, 6];
+        <br>
+        var odds  = evens.map(function (v) { return v + 1; });
+        <br>
+        var pairs = evens.map(function (v) { return { even: v, odd: v + 1 }; });
+        <br>
+        var nums  = evens.map(function (v, i) { return v + i; });
+        <br>
+        var fives = [];
+        <br>
+        nums.forEach(function (v) {
+            <br>
+          if (v % 5 === 0) {
+            <br>
+            fives.push(v);
+            <br>
+          }
+          <br>
+        });
+        <br>
+    </span>
+    <p>Converted: <br></p>
+    <p><span style="font-style: italic;">
+        let evens = [1, 2, 3, 4, 5, 6];
+        <br>
+        let odds = evens.map((v) => { return v + 1; });
+        <br>
+        let pairs = evens.map((v) => { return { even: v, odd: v + 1 }; });
+        <br>
+        let nums = evens.map((v, i) => { return v + i; });
+        <br>
+        let fives = [];
+        <br>
+        nums.forEach((v) => {
+            <br>
+            if (v % 5 === 0) {
+                <br>
+                fives.push(v);
+                <br>
+            }
+            <br>
+        });
+        <br>
+        </span>
+    </p>
+
+    <h3>6. Classes</h3>
+    <p style="font-weight: bold;">ES5</p> 
+    <span style="font-style: italic;">
+        <br>
+        var Shape = function(id, x, y) {
+            <br>
+            this.id = id;
+            <br>
+            this.move(x, y);
+            <br>
+          };
+          <br>
+          Shape.prototype.move = function(x, y) {
+            <br>
+            this.x = x;
+            <br>
+            this.y = y;
+            <br>
+          };    
+          <br>
+    </span>
+    <p>Converted: <br></p>
+    <p><span style="font-style: italic;">
+        <br>
+        class Shape {
+            <br>
+            constructor(id, x, y){
+                <br>
+                this.id = id;
+                <br>
+                this.move(x, y);
+                <br>
+            }
+            <br>
+            move(x, y){
+                <br>
+                this.x = x;
+                <br>
+                this.y = y;
+                <br>
+            }
+            <br>
+        }
+        <br>
+    </span></p>
+
+    <h3>7. Modules</h3>
+    <p style="font-weight: bold;">ES5</p> 
+    <span style="font-style: italic;">
+        <br>
+        //  lib/utils.js
+        <br>
+        Utils = {};
+        <br>
+        Utils.sum = function(x, y) { return x + y };
+        <br>
+        Utils.pi = 3.141593;
+        <br>
+
+        <br>
+        //  someApp.js
+        <br>
+        var math = Utils;
+        <br>
+        console.log("2π = " + math.sum(math.pi, math.pi));
+        <br>
+
+        <br>
+        //  otherApp.js
+        <br>
+        var sum = Utils.sum, pi = Utils.pi;
+        <br>
+        console.log('2π = ' + sum(pi, pi));
+        <br>
+    </span>
+    <p>Converted: <br></p>
+    <p><span style="font-style: italic;">
+        <br>
+        // lib/utils.js
+        <br>
+    Utils = {};
+    <br>
+    Utils.sum = function(x, y) { return x + y };
+    <br>
+    Utils.pi = 3.141593;
+    <br>
+    export {Utils};
+    <br>
+
+    <br>
+    // someApp.js
+    <br>
+    import {Utils} from 'lib/utils.js'
+    <br>
+    console.log("2π = " + Utils.sum(Utils.pi, Utils.pi));
+    <br>
+
+    <br>
+    // otherApp.js
+    <br>
+    import {Utils} from 'lib/utils.js'
+    <br>
+    console.log('2π = ' + sum(Utils.sum, Utils.pi));    
+    <br>
+    </span></p>
+
+    <h3>8. Promise</h3>
+    <p style="font-weight: bold;">ES5</p> 
+    <span style="font-style: italic;">
+        <br>
+        function showMessAfterTimeout(msg, who, timeout, onDone) {
+            <br>
+            setTimeout(function () {
+                <br>
+              onDone(msg + ' Hi ' + who + '!');
+              <br>
+            }, timeout);
+            <br>
+          }
+          <br>
+          showMessAfterTimeout('', 'Foo', 100, function(msg) {
+            <br>
+            showMessAfterTimeout(msg, 'Bar', 200, function(msg) {
+                <br>
+              console.log('Finish after 300ms:' + msg);
+              <br>
+            });
+            <br>
+          });
+          <br>
+    </span>
+    <p>Converted: <br></p>
+    <p><span style="font-style: italic;">
+        <br>
+        const showMessAfterTimeout = (msg, who, timeout) =>{
+            <br>
+            return new Promise((resolve) => {
+                <br>
+                return setTimeout(() => {
+                    <br>
+                    return resolve(`${msg} Hi ${who}!`);
+                    <br>
+                }, timeout);
+                <br>
+            });
+            <br>
+        }
+        <br>
+        showMessAfterTimeout('', 'Foo', 100)
+        <br>
+            .then((msg) => {
+                <br>
+                return showMessAfterTimeout(msg,'Bar', 200).then((newMsg) => {
+                    <br>
+                    return newMsg;
+                    <br>
+                });
+                <br>
+            })
+            <br>
+            .then((finalMsg) => console.log(`Finish after 300ms: ${finalMsg}`))
+            <br>
+            .catch((e)=>{/** Do something if error */});
+            <br>
+    </span></p>
+
+    <h3>9. Loops</h3>
+    <p style="font-weight: bold;">- Give an example for each method: 
+        <br>
+        + for…of
+        <br>
+        + findIndex()
+        <br></p> 
+    <p>+ for…of Example</p>
+    <p><span style="font-style: italic;">
+        <br>
+        const a = ['a', 'b', 'c',['d', 'e', 'f', ['g','h','i']]];
+        <br>
+        for (const e of a) {
+            <br>
+        console.log(e);
+        <br>
+        }
+        <br>
+    </span>
+    </p>
+    <p>+ findIndex() Example</p>
+    <p><span style="font-style: italic;">
+        <br>
+        const ages = [3, 10, 18, 20, 21, 23, 41, 1, 4];
+        <br>
+        ages[ages.findIndex((e) => {return e > 18;})];
+        <br>
+    </span></p>
+</body>
+
+</html> 
