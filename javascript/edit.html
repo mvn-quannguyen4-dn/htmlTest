@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./index.css">  
+        <link rel="stylesheet" href="./add.css">  
+        <script src="./edit.js"></script>
+    </head>
+    <body>
+        <header class="flex-wrapper">
+            <div class="page-logo">
+                <a href="./index.html"><img src="./logo.jfif" alt="page-logo"></a>
+            </div>
+            <div class="cart-logo">
+                <a class = "button" href="cart.html"><Button class = "button"> Add new Product</Button></a>
+            </div>
+        </header>
+        <section>
+            <h1>Create Product</h1>
+            <div class = "form">
+                <label for="name">Product's Name</label>
+                <input type="text" id="name" name="name" placeholder="Give your product a name">
+                <label for="price">Product's Price</label>
+                <input type="number" id="price" name="price" placeholder="Price in €">
+                <label for="image">Product's Image</label>
+                <input type="text" id="image" name="image" placeholder="Image link here">
+                <button onclick="editProduct()">Update product</button>
+            </div>
+        </section>
+        <script>
+            init()
+        </script>
+        <footer>
+            <p>JavaScript Final</p>
+        </footer>
+    </body>
+</html>
