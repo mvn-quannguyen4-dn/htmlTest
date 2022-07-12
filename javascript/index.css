@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    background-color: #eff0f3;
+}
+.flex-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+h1{
+    padding: 2% 10%; 
+}
+header , header a, header img{
+    border: none;
+    background-color: #fffffe;
+}
+.page-logo{
+    margin-left: 5%;
+}
+.page-logo img{ 
+    height: 60px;
+}
+
+.search-bar{
+    display: flex;
+    width: 40%;
+}
+.search-bar input[type=text] {
+    width: 100%;
+    padding: 6px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 17px;
+    border: none;
+}
+.search-bar button{
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+.search-bar button:hover {
+    background: #ccc;
+}
+
+
+
+.cart-logo{
+    align-self:center; 
+    margin-right: 5%;
+}
+
+
+
+header .button{
+    border: none;
+    border-radius: 30px;;
+    background-color: #ff8e3c;
+    cursor: pointer;
+    padding: 10px;
+}
+header .button:hover {
+    background-color: #3f37d9;
+    color: white;
+}
+
+header .button:active {
+  background-color: #3f37d9;
+  color: white;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+header .icon{
+    font-size: 300%;
+    color: #0d0d0d;
+    background-color: #fffffe;
+}
+.board{
+    padding: 5% 10%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.item-card{
+    flex: 1 1 300px;
+    margin: 10px;
+    margin-bottom: 30px;
+}
+.item-card img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+}
+.item-card .item-name{
+    font-weight: bold;
+    text-align: center;
+}
+.item-card .item-price{
+    color: #d9376e;
+    text-align: center;
+}
+
+.action{
+    display: flex;
+    justify-content: space-between;
+    height: 10%;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.item-card .button{
+    border: none;
+    border-radius: 30px;;
+    background-color: #ff8e3c;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    cursor: pointer;
+}
+.item-card .button:hover {
+    background-color: #37d985
+}
+
+.item-card .button:active {
+  background-color: #37d985;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.item-card .delete-button{
+    border: none;
+    border-radius: 30px;;
+    background-color: #d9376e;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    cursor: pointer;
+}
+.item-card .delete-button:hover {
+    background-color: #d93737
+}
+
+.item-card .delete-button:active {
+  background-color: #d93737;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+footer, footer p{
+    padding: 10px;
+    background-color: #fffffe;
+    text-align: center;
+}
